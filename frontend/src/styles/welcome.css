@@ -1,0 +1,30 @@
+.welcome-page {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Fade-in when page loads */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlide 3s forwards;
+}
+
+/* Fade-out before redirect */
+.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+   
+}
+
+@keyframes fadeInSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,156 @@
+/* Main page container */
+.breathe-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;          /* center horizontally */
+  justify-content: center;      /* center vertically */
+  padding: 40px;
+  gap: 25px;
+}
+
+/* Description text */
+.breathe-desc {
+  font-size: 16px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+/* Duration buttons container */
+.duration-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* Duration button style */
+.duration-btn {
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-primary-light);
+  border: none;
+  border-radius: 12px;
+  color: var(--color-primary);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover + Active state */
+.duration-btn:hover,
+.duration-btn.active {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+/* Sound buttons container */
+.sound-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Sound button style */
+.sound-btn {
+  padding: 10px 20px;
+  background-color: var(--color-primary-light);
+  border: none;
+  border-radius: 20px;
+  color: var(--color-primary);
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover + Active state */
+.sound-btn:hover,
+.sound-btn.active {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+/* Start button wrapper */
+.start-btn-wrapper {
+  margin-top: 30px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- Breathing Animation (single circle with proper layering) --- */
+.breathing-circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Base circle color */
+  background-color: var(--color-primary-light);
+
+  /* Text styling */
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color-white);
+
+  /* Keep text above the fill layer */
+  z-index: 1;
+}
+
+/* Text stays above */
+.breathing-circle > span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fill layer behind the text */
+.breathing-circle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color: var(--color-white); /* fill color */
+  opacity: 0.3;
+  clip-path: circle(0% at 50% 50%);       /* start empty at center */
+  transition: clip-path 12s ease;
+  z-index: 0;                              /* behind text */
+  pointer-events: none;
+}
+
+/* Inhale: fill from center to edge */
+.breathing-circle.inhale::before {
+  clip-path: circle(100% at 50% 50%);
+}
+
+/* Exhale: empty from edge to center */
+.breathing-circle.exhale::before {
+  clip-path: circle(0% at 50% 50%);
+}
+
+.feedback-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feedback-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.thumb-icon {
+  width: 40px;
+  height: 40px;
+  fill: none;                   /* ✅ outline only initially */
+  stroke: var(--color-white); /* ✅ outline color */
+  transition: fill 0.3s ease;
+}
+
+/* Filled state */
+.feedback-btn.filled .thumb-icon {
+  fill: var(--color-white);     /* ✅ fill with white */
+  stroke: var(--color-white); /* ✅ keep outline */
+}

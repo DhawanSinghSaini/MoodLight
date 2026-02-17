@@ -1,0 +1,66 @@
+.goal-box {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid var(--color-primary-light);
+  border-radius: 50px;
+  width: 300px;                 
+  padding: 10px 15px;
+  box-sizing: border-box;
+  /* ✅ subtle white shadow */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.goal-symbol {
+  font-size: 40px;              
+  flex-shrink: 0;
+}
+
+.goal-text {
+  flex: 1;
+  min-width: 100px;
+  max-width: 140px;
+}
+
+.goal-heading {
+  margin: 0;
+  font-size: 13px;              /* ✅ reduced size */
+  font-weight: bold;
+}
+
+.goal-desc {
+  font-size: 11px;              /* ✅ reduced size */
+  margin: 0;
+  opacity: 0.8;
+}
+
+.goal-tick {
+  background-color: var(--color-primary-light);
+  border-radius: 50%;
+  width: 50px;                  /* ✅ bigger tick circle */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;              /* ✅ big tick mark */
+  color: white;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.goal-add {
+  background-color: var(--color-primary-light);
+  border-radius: 50%;
+  width: 50px;                  /* ✅ bigger tick circle */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;              /* ✅ big tick mark */
+  color: white;
+  cursor: pointer;
+  flex-shrink: 0;
+}

@@ -1,0 +1,27 @@
+.milestone-card {
+  background: var(--color-dark, #1e1e2f);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  color: var(--color-white, #fff);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.milestone-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.milestone-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--color-accent, #A8E6CF);
+}
+
+.milestone-desc {
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--color-white, #ddd);
+}

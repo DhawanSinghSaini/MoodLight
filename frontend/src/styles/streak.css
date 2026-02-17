@@ -1,0 +1,38 @@
+.streak-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem; /* ✅ space between circle and number */
+  justify-content: center;
+}
+
+.streak-circle {
+  width: 25px;   /* ✅ fixed smaller size */
+  height: 25px;
+  background-color: var(--color-primary);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Shadow only when days > 1 */
+.streak-circle.with-shadow {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.thunder-icon {
+  width: 15px;   /* ✅ fixed thunder size */
+  height: 15px;
+}
+
+.thunder-icon.with-shadow {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+}
+
+.streak-days {
+  font-size: 1.0rem;
+
+  font-weight: bold;
+  color: white;
+}

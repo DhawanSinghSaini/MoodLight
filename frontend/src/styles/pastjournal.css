@@ -1,0 +1,82 @@
+/* ===== PastJournal Page ===== */
+.pastjournal-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 40px;
+  position: relative;
+  width: 80vw; /* ✅ same width as journal-page */
+}
+
+.pastjournal-heading {
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-size: 28px;
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+/* Stack container for z-axis layering */
+.stack-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 500px; /* ✅ same height as journal stack */
+}
+
+/* FixNote layering */
+.fixnote-wrapper {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Tilted notes for file stack look */
+.tilt-left {
+  transform: rotate(-5deg) translateY(20px);
+  opacity: 0.9;
+}
+
+.tilt-right {
+  transform: rotate(5deg) translateY(40px);
+  opacity: 0.9;
+}
+
+/* Top Note always above */
+.note-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+/* ===== Navigation Buttons ===== */
+.pastjournal-actions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.nav-btn {
+  background: var(--color-primary-light);
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  border-radius: 50px;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: var(--color-white);
+  color: var(--color-primary);
+}

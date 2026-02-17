@@ -1,0 +1,78 @@
+.main-page {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+
+/* Sidebar default (desktop) */
+.sidebar-wrapper {
+  flex: 0 0 280px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 20px;
+  background-color: var(--color-primary);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Content fills the center */
+.content-wrapper {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.content-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Right streak pane */
+.streak-wrapper {
+  flex: 0 0 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 15px;
+}
+
+/* Hamburger hidden by default */
+.hamburger-wrapper {
+  display: none;
+  position: absolute;
+  top: 20px;
+  z-index: 1001;
+}
+
+/* --- Responsive (<900px) --- */
+@media (max-width: 1058px) {
+  .hamburger-wrapper {
+    display: block; /* ✅ show hamburger */
+  }
+
+  .sidebar-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-100%); /* ✅ hidden by default */
+    opacity: 0;
+    z-index: 1000;
+  }
+
+  .sidebar-wrapper.open {
+    transform: translateY(0);   /* ✅ slide down animation */
+    opacity: 1;
+  }
+
+  .streak-wrapper {
+    display: none; /* ✅ hide streak on mobile */
+    visibility: hidden;
+  }
+}

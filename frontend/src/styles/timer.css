@@ -1,0 +1,99 @@
+.timer-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* center horizontally */
+  justify-content: center;  /* center vertically */
+  padding: 40px;
+  gap: 25px;
+}
+
+.timer-desc {
+  font-size: 16px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.timer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.timer-input {
+  font-size: 42px;
+  padding: 10px 15px;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-white);
+}
+
+.start-btn-wrapper {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-display {
+  margin-top: 20px;
+  font-size: 42px;
+  font-weight: bold;
+  color: var(--color-white);
+}
+
+.control-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.control-btn {
+  background: transparent;
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+  color: var(--color-white);
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.timesup-message {
+  margin-top: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.sound-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.sound-btn {
+  padding: 8px 14px;
+  border: 2px solid var(--color-primary);
+  border-radius: 50px;
+  background: var(--color-primary-light);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sound-btn.active,
+.sound-btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary-light);
+}

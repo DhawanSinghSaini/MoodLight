@@ -1,0 +1,29 @@
+.hamburger-container {
+  width: 50px;                          /* ✅ small rectangular size */
+  height: 40px;
+  background-color: var(--color-primary-light); /* ✅ primary-light background */
+  border-radius: 0 20px 20px 0;          /* ✅ circular edge on right side */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hamburger-line {
+  width: 20px;
+  height: 3px;
+  background-color: var(--color-primary); /* ✅ primary color lines */
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
+/* subtle hover effect */
+.hamburger-container:hover {
+  background-color: var(--color-primary);
+}
+
+.hamburger-container:hover .hamburger-line {
+  background-color: var(--color-white);   /* ✅ invert lines on hover */
+}

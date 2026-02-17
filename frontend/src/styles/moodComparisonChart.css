@@ -1,0 +1,10 @@
+.mood-comparison-card {
+  text-align: center;
+  height: fit-content; /* ✅ compact card */
+}
+
+.mood-comparison-card h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}

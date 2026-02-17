@@ -1,0 +1,20 @@
+.heading-1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--color-white);       /* Blue */
+  margin: 1rem 0;
+}
+
+.heading-2 {
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: var(--color-white); /* Lighter blue */
+  margin: 0.75rem 0;
+}
+
+.heading-3 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--color-white);                    /* Black */
+  margin: 0.5rem 0;
+}

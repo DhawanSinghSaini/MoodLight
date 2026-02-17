@@ -1,0 +1,17 @@
+.weekly-doughnut-card {
+  text-align: center;
+  width: 350px;        /* ✅ compact size */
+  height: fit-content; /* ✅ adjusts to content */
+  padding: 12px 16px;
+  border: 2px solid var(--color-primary-light);
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.card-heading {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}

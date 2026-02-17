@@ -1,0 +1,25 @@
+:root {
+  --color-primary: #0066FF;
+  --color-primary-light: #6EA8FF;
+  --color-white: #FFFFFF;
+}
+
+body {
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0;
+  background-color: var(--color-primary);  /*change after testing comonents is done*/
+  color: var(--color-white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-weight: 400;
+  margin: 0.5rem 0;
+}

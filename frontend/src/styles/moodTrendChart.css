@@ -1,0 +1,24 @@
+.mood-trend-card-new {
+  padding: 1rem;
+  background: var(--color-white);
+  border-radius: 9px;
+  border: 2px solid var(--color-primary-light);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  width: 350px;
+  max-width: 500px;
+}
+
+.mood-trend-card-new h2 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.mood-trend-canvas-new {
+  display: block;
+  width: 100% ;     /* fill card width */
+  height: 250px !important;   /* fixed vertical height */
+}

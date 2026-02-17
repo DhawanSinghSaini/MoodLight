@@ -1,0 +1,36 @@
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: var(--color-primary);
+}
+
+.login-left {
+  flex: 1; /* left half */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.login-right {
+  flex: 1; /* right half */
+  background-color: white; /* full white background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 40px rgba(255, 255, 255, 0.7);
+}
+
+/* 📱 Responsive: only show right div on small screens */
+@media (max-width: 750px) {
+  .login-left {
+    display: none; /* hide left half */
+  }
+
+  .login-right {
+    flex: 1 1 100%; /* take full width */
+    width: 100%;
+    height: 100%;
+    box-shadow: none; /* optional: remove shadow for clean mobile look */
+  }
+}

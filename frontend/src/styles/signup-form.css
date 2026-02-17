@@ -1,0 +1,81 @@
+.signup-form {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 2rem;
+  overflow-y: auto; /* ✅ makes right div scrollable */
+
+  /* Hide scrollbar cross-browser */ 
+  scrollbar-width: none; /* Firefox */ 
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.signup-title {
+  align-self: center;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  visibility: hidden;
+}
+
+.signup-form H2 {
+  color: var(--color-primary);
+  align-self: center;
+}
+
+.signup-label {
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Playwrite HR Lijeva", cursive;
+  color: var(--color-primary);
+}
+
+.signup-input {
+  width: 100%;
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+  border: 2px solid var(--color-primary);
+  font-size: 1rem;
+  font-family: "Playwrite HR Lijeva", cursive;
+  color: black;
+  background: white;
+}
+
+/* ✅ Age + Sleep row */
+.signup-row {
+  display: flex;
+  gap: 1rem;
+  align-items: end;
+}
+
+.signup-field {
+  flex: 1; /* each field takes equal space */
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-footer {
+  margin-top: 1rem;
+  text-align: center;
+  color: black;
+  font-size: 0.9rem;
+}
+
+.signup-footer a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.signup-form Button {
+  width: 140px;
+  align-self: center;
+}
+
+@media (max-width: 750px) {
+  .signup-title{
+    visibility: visible;
+  }
+}

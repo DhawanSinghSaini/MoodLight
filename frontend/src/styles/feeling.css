@@ -1,0 +1,141 @@
+.feeling-page {
+  padding-top:5%;
+  text-align: center;
+  padding: 40px;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;   /* ✅ center horizontally */
+  min-height: 100vh;     /* ✅ full viewport height */
+  background: var(--color-primary-light); /* optional background */
+  max-height: fit-content;
+}
+
+.emoji-container {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;       /* ✅ wrap on smaller screens */
+  justify-content: center;
+  gap: 40px;             /* ✅ more breathing space */
+}
+
+.emoji-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.emoji {
+  font-size: 35px;       /* ✅ slightly bigger base size */
+  transition: transform 0.25s ease;
+}
+
+.emoji-wrapper:hover .emoji,
+.emoji-wrapper.active .emoji {
+  transform: scale(1.6); /* ✅ smoother, slightly larger */
+}
+
+.emoji-label {
+  margin-top: 10px;
+  font-size: 16px;       /* ✅ more readable */
+  font-weight: 500;      /* ✅ stronger emphasis */
+  color: var(--color-accent, #f0f0f0);
+  transition: color 0.25s ease;
+}
+
+.emoji-wrapper:hover .emoji-label,
+.emoji-wrapper.active .emoji-label {
+  color: var(--color-primary, #ffcc00); /* ✅ highlight on hover/click */
+}
+
+@media (max-width : 800px) {
+    .emoji{
+        font-size: 25px;
+    }
+}
+
+@media (max-width : 550px) {
+    .emoji-container{
+        gap:20px;
+    }
+    .emoji{
+        font-size: 20px;
+    }
+
+    .name{
+        font-size: 20px;
+    }
+
+    .msg{
+        font-size: 30px;
+    }
+}
+
+@media (max-width : 570px) {
+    .emoji-container{
+        gap:10px;
+    }
+    .emoji{
+        font-size: 15px;
+    }
+
+    .name{
+        font-size: 20px;
+    }
+
+    .msg{
+        font-size: 30px;
+    }
+}
+
+.note-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.custom-textarea {
+  width: 400px;
+  height: 400px;
+  min-height: 120px;
+  padding: 15px;
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-size: 16px;
+  color: var(--color-white);
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 28px,
+    rgba(255,255,255,0.1) 29px
+  ); /* ✅ dotted background effect */
+  border: 2px solid #fff; /* ✅ white border */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.2); /* ✅ light shadow */
+  resize: none;
+  outline: none;
+}
+
+.custom-textarea::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background: var(--color-primary);
+  border-radius: 50px;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: var(--color-white);
+  color: var(--color-primary);
+}

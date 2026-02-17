@@ -1,0 +1,80 @@
+.journal-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 40px;
+  position: relative;
+  width: 80vw;
+}
+
+.journal-heading {
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-size: 28px;
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+/* Stack container for z-axis layering */
+.stack-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 500px; /* enough space for overlap */
+}
+
+/* FixNote layering */
+.fixnote-wrapper {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Tilted notes for file stack look */
+.tilt-left {
+  transform: rotate(-5deg) translateY(20px);
+  opacity: 0.9;
+}
+
+.tilt-right {
+  transform: rotate(5deg) translateY(40px);
+  opacity: 0.9;
+}
+
+/* Top Note always above */
+.note-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+/* ===== Old Entries Button ===== */
+.old-entries-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: flex-start; /* bottom-left alignment */
+  margin-top: 20px;
+}
+
+.old-entries-btn {
+  background: var(--color-primary-light);
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  border-radius: 50px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.old-entries-btn:hover {
+  background: var(--color-white);
+  color: var(--color-primary);
+  border: none;
+}

@@ -1,0 +1,23 @@
+.top-coping-container {
+  padding: 20px;
+  border: 2px solid var(--color-primary-light);
+  border-radius: 8px;
+  background: var(--color-white);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.top-coping-heading {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.coping-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* space between cards */
+}

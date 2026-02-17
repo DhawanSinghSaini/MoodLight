@@ -1,0 +1,73 @@
+.insight-grid-3x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* default: 3 columns */
+  gap: 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: start;
+  grid-template-rows: masonry;
+}
+
+H2{
+  text-align: center;
+}
+.insight-subheading{
+  text-align: center;
+}
+/* Hover effect */
+.insight-grid-3x3 > * {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.insight-grid-3x3 > *:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ✅ Medium screens: 2 columns × 5 rows */
+@media (max-width: 1500px) {
+  .insight-grid-3x3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ✅ Small screens: 1 column × 9 rows */
+@media (max-width: 800px) {
+  .insight-grid-3x3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.comparison-group{
+ display: flex;
+ flex-direction: column;
+ gap: 9px;
+}
+
+.reflection-card {
+  width: 350px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  color: var(--color-primary);
+  text-align: center;
+  font-size: 13.35px;
+  border: 2px solid var(--color-primary-light);
+}
+
+.reflection-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  font-family: "Playwrite HR Lijeva", cursive;
+}
+
+.reflection-submit{
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50px;
+}

@@ -1,0 +1,48 @@
+/* ===== FixNote Component ===== */
+.fixnote-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border: 2px solid var(--color-white);
+  border-radius: 12px;
+
+  /* ✅ Blue textured background (same as Note) */
+  background: var(--color-primary-light);
+  background-image: radial-gradient(var(--color-primary) 1px, transparent 1px);
+  background-size: 20px 20px;
+
+  /* ✅ Allow height growth but cap at 60% viewport */
+  max-height: 60vh;
+  overflow-y: auto; /* scroll if content exceeds */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.fixnote-heading {
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-size: 18px;
+  padding: 10px 0;
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+.fixnote-date {
+  font-size: 10px;
+  color: var(--color-white);
+  opacity: 0.8;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.fixnote-content {
+  font-family: "Playwrite HR Lijeva", cursive;
+  flex-grow: 1; /* ✅ expands to fill available space */
+  min-height: 200px;
+  height: auto;
+  padding: 12px;
+  background: transparent;
+  color: var(--color-white);
+  font-size: 16px;
+  line-height: 1.4;
+}

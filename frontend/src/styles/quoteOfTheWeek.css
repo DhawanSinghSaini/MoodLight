@@ -1,0 +1,29 @@
+.quote-card {
+  padding: 20px;
+  border: 2px solid var(--color-primary-light);
+  border-radius: 8px;
+  background: var(--color-white);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quote-heading {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.quote-text {
+  font-size: 16px;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.quote-author {
+  font-size: 14px;
+  color: var(--color-primary-light);
+}

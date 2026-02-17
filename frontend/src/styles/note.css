@@ -1,0 +1,98 @@
+/* ===== Note Component ===== */
+.note-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border: 2px solid var(--color-white);
+  border-radius: 12px;
+
+  /* ✅ Blue textured background */
+  background: var(--color-primary-light);
+  background-image: radial-gradient(var(--color-primary) 1px, transparent 1px);
+  background-size: 20px 20px;
+
+  /* ✅ Allow height growth but cap at 80% viewport */
+  max-height: 60vh;
+  overflow-y: auto; /* scroll if content exceeds 80% */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* ===== Heading Input ===== */
+.note-heading-input {
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+.note-heading-input::placeholder {
+  color: var(--color-white);
+  opacity: 0.7;
+}
+
+/* ===== Date ===== */
+.note-date {
+  font-size: 10px;
+  color: var(--color-white);
+  opacity: 0.8;
+  margin-left: 10px;
+}
+
+/* ===== Textarea ===== */
+.note-textarea {
+    font-family: "Playwrite HR Lijeva", cursive;
+  flex-grow: 1; /* ✅ expands to fill available space */
+  min-height: 200px;
+  height: 80vh;
+  resize: none; /* prevent manual resize, let flex handle growth */
+  padding: 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--color-white);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.note-textarea::placeholder {
+  color: var(--color-white);
+  opacity: 0.7;
+}
+
+/* ===== Actions ===== */
+.note-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ===== Save Button (Paper Plane) ===== */
+.note-save-btn {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+}
+
+.note-save-btn:hover {
+  background: var(--color-white);
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.paperplane-icon {
+  stroke: currentColor;
+}

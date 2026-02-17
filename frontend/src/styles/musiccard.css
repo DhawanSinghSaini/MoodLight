@@ -1,0 +1,122 @@
+/* ===== Music Card ===== */
+.music-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  padding: 15px 20px;
+  border: 2px solid var(--color-primary-light);
+  border-radius: 12px;
+  background: var(--color-white);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Cover Art */
+.music-cover {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid var(--color-primary-light);
+  flex-shrink: 0;
+}
+
+/* Placeholder if no image */
+.music-cover.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary-light);
+  color: var(--color-white);
+  font-size: 24px;
+}
+
+/* Info */
+.music-info {
+  flex-grow: 1;
+  min-width: 0; /* ✅ required for ellipsis */
+}
+
+.music-title {
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* ✅ truncate long titles */
+}
+
+.music-artist {
+  font-size: 14px;
+  color: var(--color-primary-light);
+  opacity: 0.8;
+  margin: 2px 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* ✅ truncate long artist names */
+}
+
+/* Controls */
+.music-controls {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  
+  align-items: center;
+  justify-content: center;
+}
+
+.music-btn {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-btn:hover {
+  background: var(--color-primary-light);
+  color: var(--color-white);
+  transform: scale(1.1);
+}
+
+.play-btn {
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+}
+
+/* ===== Responsive Square Layout ===== */
+@media (max-width: 426px) {
+  .music-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .music-info {
+    width: 100%;
+  }
+
+  .music-controls {
+    margin-top: 10px;
+  }
+
+  .music-title,
+  .music-artist {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%; /* ✅ keep text inside square */
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,35 @@
+.moodlight-card {
+  background-color: var(--color-primary-light);
+  width: 80%;              /* relative to parent width */
+  max-width: 400px;        /* cap it so it doesn’t grow too large */
+  height: 85vh;
+
+  /* Rounded corners only at the bottom */
+  border-radius: 0 0 600px 600px;
+
+  /* Center content vertically + horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Stronger shadow */
+  box-shadow: 0 8px 500px rgba(255, 255, 255, 0.5);
+
+  overflow: hidden;
+}
+
+@media (max-width: 450px) {
+  .moodlight-card {
+    width: 90%;       /* still relative to parent */
+    max-width: 350px; /* cap for smaller screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .moodlight-card {
+    width: 95%;       /* relative to parent */
+    max-width: none;  /* let it stretch fully */
+  }
+}
+
+

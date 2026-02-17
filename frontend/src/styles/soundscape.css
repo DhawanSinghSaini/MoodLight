@@ -1,0 +1,60 @@
+.soundscape-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  gap: 30px;
+}
+
+.soundscape-heading {
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-size: 28px;
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+/* Grid for MusicCards */
+.soundscape-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+  /* max-width: 900px; */
+}
+
+@media (max-width: 2560px) {
+  .soundscape-grid {
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 2295px) {
+  .soundscape-grid {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 1650px) {
+  .soundscape-grid {
+    grid-template-columns: repeat(1, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 1350px) {
+  .soundscape-grid {
+    grid-template-columns: repeat(1, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 1030px) {
+  .soundscape-grid {
+    grid-template-columns: repeat(1, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 850px) {
+  .soundscape-grid {
+    grid-template-columns: repeat(1, minmax(220px, 1fr));
+  }
+}
+

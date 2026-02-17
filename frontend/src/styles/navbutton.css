@@ -1,0 +1,29 @@
+.nav-button {
+  width: 250px;                          
+  height: 40px;
+  background-color: var(--color-primary);   /* ✅ solid primary by default */
+  border: 2px solid var(--color-white);     /* ✅ white border */
+  border-radius: 25px;                      /* ✅ round corners */
+  color: var(--color-white);                /* ✅ white text */
+  display: flex;
+  align-items: center;
+  justify-content: center;                  /* ✅ center text */
+  padding: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;                /* ✅ smooth transition */
+  font-size: 18px;
+}
+
+/* gradient inside + glow outside only */
+.nav-button:hover {
+  background: linear-gradient(
+    135deg, 
+    var(--color-primary-light) 0%, 
+    var(--color-primary) 50%, 
+    var(--color-primary-dark) 100%
+  );                                        /* ✅ gradient inside */
+  color: var(--color-white);                /* ✅ keep text white */
+  border-color: var(--color-white);         /* ✅ crisp border */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* ✅ glow outside only */
+  transform: scale(1.05);                   /* ✅ subtle lift */
+}

@@ -1,0 +1,84 @@
+/* ===== SetGoal Page ===== */
+.setgoal-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* center horizontally */
+  justify-content: center;   /* center vertically */
+  height: 100vh;             /* ✅ fill full viewport height */
+  gap: 25px;
+}
+
+.setgoal-desc {
+  font-size: 16px;
+  color: var(--color-white, #fff);
+  text-align: center;
+}
+
+.setgoal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+.setgoal-input {
+  font-size: 16px;
+  padding: 10px;
+  border: 2px solid var(--color-primary, #4cafef);
+  border-radius: 12px;       /* smoother rounded corners */
+  background: var(--color-primary-light, #1a1a1a);
+  color: var(--color-white, #fff);
+  text-align: center;
+  font-family: "Playwrite HR Lijeva", cursive;
+  transition: all 0.3s ease; /* ✅ smooth hover/focus transitions */
+}
+
+.setgoal-input::placeholder {
+  color: var(--color-white, #fff);
+  opacity: 0.7;
+}
+
+/* ✅ Glow effect on focus for ALL inputs */
+.setgoal-input:focus {
+  outline: none;
+  border-color: #6fc3ff;
+  box-shadow: 0 0 8px rgba(79, 207, 255, 0.7);
+}
+
+/* Date input styling */
+.setgoal-date {
+  width: 100%;              /* full width */
+  border-radius: 12px;      /* rounded corners */
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  background: var(--color-primary-light, #1a1a1a);
+  color: var(--color-white, #fff);
+  border: 2px solid var(--color-primary, #4cafef);
+  cursor: pointer;
+}
+
+/* Circle highlight for selected date parts */
+.setgoal-date::-webkit-datetime-edit-day-field:focus,
+.setgoal-date::-webkit-datetime-edit-month-field:focus,
+.setgoal-date::-webkit-datetime-edit-year-field:focus {
+  background: var(--color-primary, #4cafef);
+  color: var(--color-white, #fff);
+  border-radius: 50%;       /* circle selection */
+}
+
+.submit-btn-wrapper {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.goal-summary {
+  text-align: center;
+  font-size: 18px;
+  color: var(--color-white, #fff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}

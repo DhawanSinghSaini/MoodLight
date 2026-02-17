@@ -1,0 +1,77 @@
+/* ===== Activity Page ===== */
+.activity-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100vh;
+  max-width: 100vh;
+  gap: 25px;
+  padding: 40px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Section Headings */
+.activity-page h2 {
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-size: 24px;
+  color: var(--color-white);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Section Descriptions */
+.activity-desc {
+  font-size: 16px;
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+/* Responsive Grid */
+.activity-grid {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  justify-content: center; /* center grid items */
+  padding-bottom: 50px;
+}
+
+/* Mobile: single column */
+@media (max-width: 1055px) {
+  .activity-grid {
+    grid-template-columns: repeat(1, 300px);
+  }
+}
+
+/* Tablet: two columns */
+@media (min-width: 1055px) and (max-width: 1395px) {
+  .activity-grid {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+/* Desktop: three columns */
+@media (min-width: 1395px) and (max-width: 1720px) {
+  .activity-grid {
+    grid-template-columns: repeat(3, 300px);
+  }
+}
+
+/* Large desktop: four columns */
+@media (min-width: 1720px) {
+  .activity-grid {
+    grid-template-columns: repeat(4, 300px);
+  }
+}
+
+/* ===== Section Spacing ===== */
+.activity-section {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
