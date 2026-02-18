@@ -69,7 +69,7 @@ export default function LoginForm() {
       <Button type="submit">Submit</Button>
 
       <p className="login-footer">
-        Don’t have an account? <a href="https://moodlights.onrender.com/signup">Sign up</a> here!
+        Don’t have an account? <a href="/signup">Sign up</a> here!
       </p>
 
       {error && <p style={{ color: "red" }}>{error}</p>}
@@ -77,4 +77,5 @@ export default function LoginForm() {
     </form>
   );
 }
+
 
