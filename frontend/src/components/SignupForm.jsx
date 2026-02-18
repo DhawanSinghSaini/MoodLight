@@ -147,7 +147,7 @@ export default function SignupForm() {
       <Button type="submit">Submit</Button>
 
       <p className="signup-footer">
-        Already a member? <a href="/login">Log In</a> here!
+        Already a member? <a href="https://moodlight-hazel.vercel.app/login">Log In</a> here!
       </p>
 
       {error && <p style={{ color: "red" }}>{error}</p>}
@@ -155,5 +155,6 @@ export default function SignupForm() {
     </form>
   );
 }
+
 
 
